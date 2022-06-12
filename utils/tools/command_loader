@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+location="${RDM_DIR:-/usr/share/rdm-utils/commands}"
+
+while read -r var
+do
+  [[ -f $var ]] || continue
+  source "$var"
+done < <(find "$location" -type f)

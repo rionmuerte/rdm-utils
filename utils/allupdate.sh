@@ -19,6 +19,8 @@ do
 done
 
 pacman -Suy --noconfirm
+
+command -v flatpak > /dev/null &&
 flatpak update com.valvesoftware.Steam --noninteractive
 
 case "$action" in

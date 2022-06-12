@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-alias usage=/usr/bin/rdmutils/usage
-
 # Create /nested/or/not/direcotry
 mago()
 {
+    [[ $# -ne 1 ]] && usage "mago /path/to/new/directory/"
     mkdir -p "$1"
     cd "$1"
 }
@@ -12,6 +11,7 @@ mago()
 # Creates directory with name starting with current date optionally concatenated with name given, doesn't nest
 magot()
 {
+    [[ $# -ne 1 ]] && usage "mago directory"
     dir="$(date -Im)-$1"
     dir="${dir%-}"
     mago $dir
@@ -23,7 +23,7 @@ abstract_mago_moving()
     prog=$1
     ver=$2
     shift 2
-    [[ $# -lt 2 ]] && usage "    $ver DIR FILES..."
+    [[ $# -lt 2 ]] && usage "$ver DIR FILES..."
     dir=$1
     shift
     mkdir -p "$dir"
@@ -41,4 +41,3 @@ magoc()
 {
     abstract_mago_moving cp magoc "$@"
 }
-

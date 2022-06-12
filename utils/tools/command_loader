@@ -7,3 +7,5 @@ do
   [[ -f $var ]] || continue
   source "$var"
 done < <(find "$location" -type f)
+
+unset location

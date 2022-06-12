@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+pritnf "%s\n" "$*" >&2
+exit 1

@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Usage:" >&2
-echo "" >&2
-$location/die "    $@"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-location="${RDM_DIR:-/usr/share/rdm-utils/commands}"
+location="${RDM_UTILS_LOCATION:-/usr/share/rdm-utils}/commands"
 
 while read -r var
 do

@@ -2,7 +2,7 @@
 
 if [[ ! $USER == root ]]
 then
-    die "Needs root permissions to run"
+    "$RDM_TK_LOCATION/die" "Needs root permissions to run"
     exit 1
 fi
 

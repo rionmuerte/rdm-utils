@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ $# -lt 1 ]] && usage "mkscript DIR _SHELL_"
+[[ $# -lt 1 ]] && $RDM_TK_LOCATION/usage "mkscript DIR _SHELL_"
 
 scr=$1
 shell="${2:-bash}"

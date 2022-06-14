@@ -5,6 +5,7 @@ mago()
 {
     [[ $# -ne 1 ]] && usage "mago /path/to/new/directory/"
     mkdir -p "$1"
+    #shellcheck disable=SC2164
     cd "$1"
 }
 
@@ -14,7 +15,7 @@ magot()
     [[ $# -ne 1 ]] && usage "mago directory"
     dir="$(date -Im)-$1"
     dir="${dir%-}"
-    mago $dir
+    mago "$dir"
 }
 
 # helper, creates dir, then uses $prog -t "$dir" "$@" where prog is meant to be mv or cp
@@ -28,6 +29,7 @@ abstract_mago_moving()
     shift
     mkdir -p "$dir"
     $prog -t "$dir" "$@"
+    #shellcheck disable=SC2164
     cd "$dir"
 }
 

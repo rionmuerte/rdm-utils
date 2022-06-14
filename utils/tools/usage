@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+printf "Usage:\n\n" >&2
+$RDM_TK_LOCATION/die "    $@"

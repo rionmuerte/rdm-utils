@@ -12,7 +12,7 @@ defaults to `/usr/share/rdm-utils`
 ### Used:
 
 - `XDG_CONFIG_HOME` - stores constants and other configs
-- `XDG_DATA_HOME' - stores data files,
+- `XDG_DATA_HOME` - stores data files,
 
 ## Commands:
 
@@ -31,5 +31,3 @@ defaults to `/usr/share/rdm-utils`
 - `die` - killswitch function
 - `usage` - one-line help function
 - `mkscrip` - creates file with env shebang and selected interpreter
-
-Sources all the commands located in `commands` directory
